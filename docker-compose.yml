@@ -1,0 +1,47 @@
+version: '3'
+
+#networks:
+#  app-net:
+#    driver: bridge
+
+services:
+  client:
+    restart: always
+    build: ./client
+    network_mode: host
+    container_name: NLPAnalyser-client
+    volumes:
+      - "./client:/app"
+    depends_on:
+      - socketserver
+    command: "npm run serve"
+
+
+  server:
+    restart: always
+    build: ./server
+    network_mode: host
+    container_name: NLPAnalyser-server
+    volumes:
+      - "./server:/app"
+    command: python app.py
+    depends_on:
+      - socketserver
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+
+  socketserver:
+    restart: always
+    build: ./socketServer
+    network_mode: host
+    container_name: NLPAnalyser-socketServer
+    volumes:
+      - "./socketServer:/app"
+    command: python app.py
+
+

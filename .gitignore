@@ -1,0 +1,11 @@
+**/.venv
+**/__pycache__
+**/.idea
+**/data
+**/tmp
+client/node_modules
+**/.sass-cache
+**/*tmp*
+client/src/styles.css.map
+**/.ipynb_checkpoints
+**/.DS_Store

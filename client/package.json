@@ -1,0 +1,55 @@
+{
+  "name": "NLPAnalyser",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite serve --host --port 8000",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore --fix src"
+  },
+  "dependencies": {
+    "@ocrv/vue-tailwind-pagination": "0.0.4",
+    "axios": "^0.24.0",
+    "bootstrap-vue": "^2.21.2",
+    "core-js": "^3.6.5",
+    "jquery": "^3.6.0",
+    "jw-vue-pagination": "^1.0.3",
+    "plotly.js-dist": "^2.7.0",
+    "socket.io-client": "^4.4.0",
+    "uuid": "^8.3.2",
+    "vue": "^2.6.11",
+    "vue-json-viewer": "^2.2.20",
+    "vue-multiselect": "^2.1.6",
+    "vue-router": "^3.5.3",
+    "vue-socket.io": "^3.0.10",
+    "vue-template-compiler": "^2.6.14",
+    "vue-vis-network": "^1.0.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.6.1",
+    "autoprefixer": "^9.8.8",
+    "eslint": "^8.7.0",
+    "eslint-plugin-vue": "^8.3.0",
+    "postcss": "^7.0.39",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17",
+    "vite": "^2.5.4",
+    "vite-plugin-vue2": "1.9.0"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

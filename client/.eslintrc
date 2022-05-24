@@ -1,0 +1,5 @@
+// .eslintrc
+env: {
+    node: true, // remove
+    es2021: true,
+}
